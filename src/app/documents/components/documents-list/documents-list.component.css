@@ -1,0 +1,44 @@
+.full-width-table {
+  width: 100%;
+}
+
+.mat-elevation-z8
+{
+  margin-top: 15px;
+}
+
+.mat-header-cell
+{
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: left !important;
+}
+
+.mat-cell
+{
+  font-size: 10px;
+  word-wrap: break-word;
+}
+
+
+.padding-10
+{
+  padding: 10px;
+}
+
+::ng-deep .mat-sort-header-content
+{
+  text-align: left !important;
+}
+
+::ng-deep th.mat-header-cell:last-of-type
+{
+  padding-right: 0 !important;
+}
+
+.fontsize-8
+{
+  font-size: 8px;
+}

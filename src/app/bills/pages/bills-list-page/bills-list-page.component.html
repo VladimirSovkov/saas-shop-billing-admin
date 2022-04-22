@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="flex">
+    <span class="title">Счета</span>
+    <div class="btn-div">
+      <button class="btn-add" (click)="openDialog()">
+        <fa-icon class="fa-lg" [icon]="add"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <app-bills-list class="margin-top" [bills]="bills" [products]="products"></app-bills-list>
+</div>

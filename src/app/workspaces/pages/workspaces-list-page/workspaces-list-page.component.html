@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="flex">
+    <span class="title">Пространства</span>
+    <div class="btn-div">
+      <button class="btn-add" (click)="openDialog()">
+        <fa-icon class="fa-lg" [icon]="add" ></fa-icon>
+      </button>
+    </div>
+  </div>
+  <app-workspaces-list class="margin-top" [workspaces]="workspaces"></app-workspaces-list>
+</div>

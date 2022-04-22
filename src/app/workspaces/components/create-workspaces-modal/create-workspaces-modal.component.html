@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Создание пространства</h1>
+<div mat-dialog-content>
+  <app-create-workspaces-form [clients]="data.clients"
+                              [products]="data.products"
+                              [submitForm]="submitForm"
+                              (createWorkspaceFormSubmitted)="onCreateWorkspaceFormSubmitted($event)"></app-create-workspaces-form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="primary" class="back-button" (click)="closeDialog()">Отменить</button>
+  <button mat-button color="primary" class="submit-button" type="submit" (click)="submit()">Выставить</button>
+</div>

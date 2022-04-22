@@ -1,0 +1,120 @@
+<div class="container">
+  <form [formGroup]="createBillForm">
+    <div class="flex-fields">
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Выберите клиента</mat-label>
+          <mat-select formControlName="user_id">
+            <mat-option *ngFor="let client of clients"
+                        [value]="client">{{client}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Продукт</mat-label>
+          <mat-select formControlName="product_id">
+            <mat-option *ngFor="let product of products"
+                        [value]="product.id">{{product.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Тариф</mat-label>
+          <mat-select formControlName="tariff_id">
+            <mat-option *ngFor="let tariff of tariffs"
+                        [value]="tariff.id">{{tariff.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Вариант тарифа</mat-label>
+          <mat-select formControlName="tariff_variant_id">
+            <mat-option *ngFor="let tariffVariant of tariffVariants"
+                        [value]="tariffVariant.id">{{tariffVariant.display_name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Выберите пространство</mat-label>
+          <mat-select formControlName="workspace_name">
+            <mat-option *ngFor="let workspace of workspaces"
+                        [value]="workspace.name">{{workspace.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Введите количество лицензий</mat-label>
+          <input matInput formControlName="licenses_count">
+          <mat-error *ngIf="createBillForm.controls['licenses_count'].hasError('pattern')">Введите значение больше 1
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Метод платежа</mat-label>
+          <mat-select formControlName="payment_method">
+            <mat-option *ngFor="let payment_method of payment_methods"
+                        [value]="payment_method">{{payment_method}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Статус оплаты</mat-label>
+          <mat-select formControlName="payment_status">
+            <mat-option *ngFor="let payment_status of payment_statuses"
+                        [value]="payment_status">{{payment_status}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <ng-container formGroupName="requisites">
+        <div>
+          <mat-form-field class="margin-top" appearance="fill">
+            <mat-label>Название организации</mat-label>
+            <input matInput formControlName="organization_name">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="margin-top" appearance="fill">
+            <mat-label>Адрес организации</mat-label>
+            <input matInput formControlName="organization_address">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="margin-top" appearance="fill">
+            <mat-label>ОГРН</mat-label>
+            <input matInput formControlName="ogrn">
+            <mat-error *ngIf="canErrorOgrn()">Только числа</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="margin-top" appearance="fill">
+            <mat-label>ИНН</mat-label>
+            <input matInput formControlName="inn">
+            <mat-error *ngIf="canErrorInn()">Только числа</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="margin-top" appearance="fill">
+            <mat-label>КПП</mat-label>
+            <input matInput formControlName="kpp">
+            <mat-error *ngIf="canErrorKpp()">Только числа</mat-error>
+          </mat-form-field>
+        </div>
+
+      </ng-container>
+    </div>
+  </form>
+</div>

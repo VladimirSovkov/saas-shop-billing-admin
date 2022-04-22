@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Выставление счёта</h1>
+<div mat-dialog-content>
+  <app-create-bills-form [clients]="data.clients"
+                         [workspaces]="data.workspaces"
+                         [products]="data.products"
+                         [submitForm]="submitForm"
+                         (createBillFormSubmitted)="onCreateBillFormSubmitted($event)">
+  </app-create-bills-form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="primary" class="back-button" (click)="closeDialog()">Отменить</button>
+  <button mat-button color="primary" class="submit-button" type="submit" (click)="submit()">Выставить</button>
+</div>

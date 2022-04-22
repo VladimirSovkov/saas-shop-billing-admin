@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Montserrat:wght@500;600&display=swap');
+
+.container
+{
+  margin: 20px;
+}
+
+.title
+{
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+
+}
+
+.margin-top
+{
+  margin-top: 20px;
+}
+
+.flex
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+::ng-deep .btn-div button
+{
+
+  border:none !important;
+  background-color: #ffffff !important;
+  color: rgba(0, 0, 0, 0.56);
+}
+
+.btn-add
+{
+  cursor: pointer;
+}
+
+.btn-add:hover
+{
+  color: rgba(0, 0, 0, 0.685);
+}
+
+.btn-add:active
+{
+  color: black;
+}

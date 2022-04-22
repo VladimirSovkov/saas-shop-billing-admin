@@ -1,0 +1,75 @@
+<div class="container">
+  <form [formGroup]="createWorkspaceForm">
+
+    <div class="flex-fields">
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Введите адрес</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Выберите статус</mat-label>
+          <mat-select formControlName="order_id">
+            <mat-option *ngFor="let order of orders"
+                        [value]="order.order_id">{{order}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Выберите клиента</mat-label>
+          <mat-select formControlName="user_id">
+            <mat-option *ngFor="let client of clients"
+                        [value]="client">{{client}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Выберите продукт</mat-label>
+          <mat-select formControlName="product">
+            <mat-option *ngFor="let product of products"
+                        [value]="product.id">{{product.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Выберите тариф</mat-label>
+          <mat-select formControlName="tariff">
+            <mat-option *ngFor="let tariff of tariffs"
+                        [value]="tariff.id">{{tariff.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Вариант тарифа</mat-label>
+          <mat-select formControlName="tariff_variant_id">
+            <mat-option *ngFor="let tariffVariant of tariffVariants"
+                        [value]="tariffVariant.id">{{tariffVariant.display_name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="margin-top" appearance="fill">
+          <mat-label>Введите количество лицензий</mat-label>
+          <input matInput formControlName="licenses_count">
+          <mat-error
+            *ngIf="createWorkspaceForm.controls['licenses_count'].hasError('pattern')
+            && !createWorkspaceForm.controls['licenses_count'].hasError('required')">
+            Введите значение больше 1
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>

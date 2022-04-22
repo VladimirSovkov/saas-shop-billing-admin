@@ -1,0 +1,57 @@
+.container
+{
+  margin: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+}
+
+.flex-buttons, .flex-fields
+{
+  display:flex;
+  width:auto;
+  justify-content: space-between;
+}
+
+.flex-buttons
+{
+  margin-top: 15px;
+  flex-direction: row;
+}
+
+.flex-fields
+{
+  flex-direction: column;
+}
+
+.margin-top
+{
+  margin-top: 10px;
+}
+
+::ng-deep .mat-form-field
+{
+  font-size: 10px !important;
+}
+
+.back-button
+{
+  color: rgba(0, 0, 0, 0.56);
+  border-radius: 5px;
+  outline: 1px solid rgba(0, 0, 0, 0.12);
+  outline-offset: -1px;
+}
+
+.back-button:hover
+{
+  background-color: rgb(238, 238, 238);
+}
+.submit-button
+{
+  color:white;
+  background-color: #FF9900;
+}
+
+.submit-button:hover
+{
+  background-color: #f09103;
+}
