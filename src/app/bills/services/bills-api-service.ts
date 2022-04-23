@@ -18,7 +18,7 @@ export class BillsApiService {
   }
 
   public getBills(): Observable<Bill[]> {
-    return this._httpClient.get<Bill[]>(`${this._apiUrl}//api/crud/order`)
+    return this._httpClient.get<Bill[]>(`${this._apiUrl}/api/crud/order`)
   }
 
   public create(createBill: CreateBill): Observable<any> {
