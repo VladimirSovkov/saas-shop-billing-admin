@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../environments/environment";
+import { environment } from 'src/environments/environment';
 import {Observable} from "rxjs";
 import {CreateBill} from "../models/create-bill";
 import {Bill} from "../models/bill";
@@ -10,7 +10,7 @@ import {Workspace} from "../../workspaces/models/workspace";
   providedIn: 'root'
 })
 export class BillsApiService {
-  private readonly _apiUrl = environment.orderServiceApiUrl;
+  private _apiUrl = environment.orderServiceApiUrl;
 
   constructor(
     private readonly _httpClient: HttpClient
