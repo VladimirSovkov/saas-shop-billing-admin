@@ -9,7 +9,7 @@ import {CreateWorkspace} from "../models/create-workspace";
   providedIn: 'root'
 })
 export class WorkspaceApiService {
-  private readonly _apiUrl = 'http://testvm.plotpad.ru:4964'
+  private readonly _apiUrl = environment.orderServiceApiUrl
 
   constructor(
     private readonly _httpClient: HttpClient

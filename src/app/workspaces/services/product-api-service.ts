@@ -8,7 +8,7 @@ import {Product} from "../models/product";
   providedIn: 'root'
 })
 export class ProductApiService {
-  private readonly _apiUrl = 'http://testvm.plotpad.ru:3005'
+  private readonly _apiUrl = environment.productServiceApiUrl
 
   constructor(
     private readonly _httpClient: HttpClient

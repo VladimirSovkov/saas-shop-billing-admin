@@ -5,7 +5,7 @@ export function initializer(keycloak: KeycloakService): () => Promise<boolean> {
 
     const options: KeycloakOptions = {
       config : {
-        url: 'https://testvm.plotpad.ru:8443',
+        url: environment.keycloakApiUrl,
         realm: 'saas-shop',
         clientId: 'saas-shop-admin-accountant'
       },

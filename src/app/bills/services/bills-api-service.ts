@@ -10,7 +10,7 @@ import {Workspace} from "../../workspaces/models/workspace";
   providedIn: 'root'
 })
 export class BillsApiService {
-  private readonly _apiUrl = 'http://testvm.plotpad.ru:4964';
+  private readonly _apiUrl = environment.orderServiceApiUrl;
 
   constructor(
     private readonly _httpClient: HttpClient
