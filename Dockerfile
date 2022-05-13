@@ -1,5 +1,6 @@
 FROM node:lts-alpine
-EXPOSE 4200
+# EXPOSE 4200
+EXPOSE 8080
 
 WORKDIR /ops/admin
 
@@ -9,9 +10,13 @@ COPY package-lock.json /ops/admin/
 COPY . /ops/admin
 
 RUN npm i
-RUN npm run build
+# RUN npm run build
 
-CMD ["npm", "run", "ng", "serve"]
+# dist\saas-shop-admin-accountant
+RUN npm install -g http-server
+
+# CMD ["npm", "run", "start"]
+CMD ["npm", "run", "docker-dev"]
 
 
 # FROM node:lts-alpine
