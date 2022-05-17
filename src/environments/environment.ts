@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   apiUrl: 'djfasjdfakl',
   keycloakApiUrl: 'http://localhost:8443',
-  orderServiceApiUrl: 'http://testvm.plotpad.ru:4964',
-  productServiceApiUrl: 'http://testvm.plotpad.ru:3005',
+  orderServiceApiUrl: 'http://localhost:9965',
+  productServiceApiUrl: 'http://localhost:3005',
 };
 
 /*
